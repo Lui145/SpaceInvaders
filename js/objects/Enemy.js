@@ -8,7 +8,7 @@ class Enemy{
         this.width = enemy.width;
         this.height = enemy.height;
 
-        this.img = loadImage("./assets/sprites/Invader.png");
+        this.img = loadImage("assets/sprites/Invader.png");
     }
 
     draw(){
