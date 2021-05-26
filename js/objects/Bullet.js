@@ -8,7 +8,7 @@ class Bullet{
         this.width = bullet.width;
         this.height = bullet.height;
 
-        this.img = loadImage("assets/sprites/Bullet.png");
+        this.img = loadImage("./assets/sprites/Bullet.png");
 
         this.speed = 10;
     }
