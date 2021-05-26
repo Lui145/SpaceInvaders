@@ -6,7 +6,7 @@ class Player{
         this.width = playerShip.width;
         this.height = playerShip.height;
 
-        this.img = loadImage("/assets/sprites/Ship.png");
+        this.img = loadImage("./assets/sprites/Ship.png");
 
         this.speed = 18;
 

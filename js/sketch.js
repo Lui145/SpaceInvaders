@@ -8,6 +8,11 @@ let cantEnemigosY = 5;
 let espEntreEnemigosX = 40;
 let espEntreEnemigosY = 30;
 
+let font;
+function preload() {
+  font = loadFont('./assets/fonts/Gameplay.ttf');
+}
+
 function setup() {
 	player = new Player(PlayerFactory.coords(
 			board.width/2 - playerShip.width/2,
@@ -34,9 +39,9 @@ function win(){
 	if(cantEnemigosX * cantEnemigosY == puntos){
 		textSize(50);
 		fill(0,100,150);
-		text("Ha ganado!!!", board.width/2 - 150, board.height/2-100);
+		text("Has ganado!!!", board.width/2 - 150, board.height/2-100);
 		textSize(34);
-		text("Presione enter para jugar de  nuevo", board.width/2 - 280, board.height/2);
+		text("Presione enter para jugar de  nuevo", board.width/2 - 270, board.height/2);
 		frameRate(0);
 	}
 }
@@ -49,20 +54,21 @@ function reset(){
 
 function gameOver(){
 	if(vidas == 0){
+		textFont(font);
 		textSize(50);
 		fill(0,100,150);
-		text("Ha Perdido!!!", board.width/2 - 150, board.height/2-100);
+		text("Has Perdido!!!", board.width/2 - 150, board.height/2-100);
 		textSize(34);
-		text("Presione enter para jugar de  nuevo", board.width/2 - 280, board.height/2);
+		text("Presione enter para jugar de  nuevo", board.width/2 - 270, board.height/2);
 		frameRate(0);
 	}
 }
 
 function points(){
 	textSize(40);
+	textFont(font);
 	fill(255,255,255  );
-	text(`Puntos: ${puntos * 100}`, 750, 50);
-	text(`Vidas: ${vidas}`, 750, 100);
+	text(`Vidas: ${vidas}   Puntos: ${puntos * 100}`, width/3, 50);
 }
 
 function crearEnemigos(x, y, cantX, cantY){

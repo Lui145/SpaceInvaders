@@ -1,6 +1,6 @@
 const board = {
-    width: 1024,
-    height: 1024,
+    width: window.innerWidth,
+    height: window.innerHeight,
 };
 
 const playerShip = {
